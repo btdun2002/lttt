@@ -19,7 +19,9 @@ int main()
     // Read the matrix elements from the file
     for (int i = 0; i < m * n; i++)
     {
-        fscanf(file, "%f", &input_mat[i]);
+        float numerator, denominator;
+        fscanf(file, "%f/%f", &numerator, &denominator);
+        input_mat[i] = numerator / denominator;
     }
 
     fclose(file); // Close the file
