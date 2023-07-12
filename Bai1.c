@@ -128,8 +128,8 @@ int main()
     float d_x_y = 0, d_y_x;
     for (int i = 0; i < m; i++)
     {
-        d_x_y += -p_x[i] * log2f(p_x[i] / p_y[i]);
-        d_y_x += -p_y[i] * log2f(p_y[i] / p_x[i]);
+        d_x_y += p_x[i] * log2f(p_x[i] / p_y[i]);
+        d_y_x += p_y[i] * log2f(p_y[i] / p_x[i]);
     }
     printf("D(P(x)||P(y)) = %f\nD(P(y)||P(x)) = %f\n", d_x_y, d_y_x);
 }
