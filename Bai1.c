@@ -41,7 +41,6 @@ int main()
     float check_sum = 0;
     for (int i = 0; i < m * n; i++)
     {
-        printf("%f", input_mat[i]);
         check_sum += input_mat[i];
         if (check_sum > 1)
         {
